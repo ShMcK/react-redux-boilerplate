@@ -2,6 +2,13 @@
 
 Base React project template.
 
+### Includes
+
+- create-react-app features
+- flow
+- redux
+- redux-devtools
+
 ### Setup
 
 ```shell
