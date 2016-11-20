@@ -48,7 +48,7 @@ storiesOf('App', module)
   ))
 `
 
-export default class Welcome extends React.Component {
+class Welcome extends React.Component {
   showApp(e) {
     e.preventDefault()
     if(this.props.showApp) this.props.showApp()
@@ -88,3 +88,5 @@ export default class Welcome extends React.Component {
     )
   }
 }
+
+export default Welcome
