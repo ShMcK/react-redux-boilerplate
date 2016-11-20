@@ -1,5 +1,9 @@
 [ignore]
 <PROJECT_ROOT>/node_modules/fbjs/.*
 
+[include]
+
 [libs]
-src/flow-type
+<PROJECT_ROOT>/flow-typed
+
+[options]
