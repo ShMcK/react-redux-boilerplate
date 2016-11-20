@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const styles = {
   main: {
@@ -34,7 +34,7 @@ const styles = {
     padding: '1px 10px',
     margin: '10px 0',
   }
-};
+}
 
 const codeBlock = `
 // Add this code to "src/stories/index.js"
@@ -46,12 +46,12 @@ storiesOf('App', module)
   .add('default view', () => (
     &lt;App /&gt;
   ))
-`;
+`
 
 export default class Welcome extends React.Component {
   showApp(e) {
-    e.preventDefault();
-    if(this.props.showApp) this.props.showApp();
+    e.preventDefault()
+    if(this.props.showApp) this.props.showApp()
   }
 
   render() {
@@ -85,6 +85,6 @@ export default class Welcome extends React.Component {
           Have a look at the <a style={styles.link} href="https://getstorybook.io/docs/basics/writing-stories" target="_blank">Writing Stories</a> section in our documentation.
         </p>
       </div>
-    );
+    )
   }
 }

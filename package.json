@@ -89,6 +89,21 @@
     ]
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "env": {
+      "browser": true,
+      "es6": true,
+      "jest": true
+    },
+    "parserOptions": {
+      "ecmaFeatures": {
+        "impliedStrict": true,
+        "jsx": true
+      }
+    },
+    "extends": "react-app",
+    "rules": {
+      "prefer-template": 0,
+      "semi": [1, "never"]
+    }
   }
 }
