@@ -123,6 +123,21 @@
     "testPathIgnorePatterns": [
       "<rootDir>/(build|docs|node_modules)/"
     ],
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "cacheDirectory": "test/.cache",
+    "collectCoverage": false,
+    "collectCoverageFrom": ["**/*.js", "!**/node_modules/**"],
+    "coverageDirectory": "test/.coverage",
+    "coverageThreshold": {
+      "global": {
+        "branches": 50,
+        "functions": 50,
+        "lines": 50,
+        "statements": 50
+      }
+    },
+    "globals": {},
+    "notify": false,
+    "resetMocks": false
   }
 }

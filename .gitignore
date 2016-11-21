@@ -9,6 +9,8 @@ coverage
 e2e/reports
 e2e/screenshots
 e2e/log
+test/.cache
+test/.coverage
 
 # production
 build
