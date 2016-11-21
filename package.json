@@ -55,6 +55,8 @@
   },
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
+    "@kadira/storybook-addon-knobs": "^1.6.0",
+    "@kadira/storybook-addon-notes": "^1.0.1",
     "autoprefixer": "6.5.1",
     "babel-core": "6.17.0",
     "babel-eslint": "7.0.0",
@@ -100,6 +102,7 @@
     "redux-devtools-log-monitor": "^1.1.1",
     "rimraf": "2.5.4",
     "selenium-standalone": "^5.8.0",
+    "storybook-host": "^1.0.7",
     "strip-ansi": "3.0.1",
     "style-loader": "0.13.1",
     "url-loader": "0.5.7",

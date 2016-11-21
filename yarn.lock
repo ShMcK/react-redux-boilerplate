@@ -12,9 +12,27 @@
     json-stringify-safe "^5.0.1"
     react-inspector "^1.1.0"
 
+"@kadira/storybook-addon-knobs":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@kadira/storybook-addon-knobs/-/storybook-addon-knobs-1.6.0.tgz#0e8013ddbac2a9d56f7154139dbb663fba259f5d"
+  dependencies:
+    babel-runtime "^6.5.0"
+    deep-equal "^1.0.1"
+    insert-css "^1.0.0"
+    moment "^2.15.0"
+    react-color "^2.4.3"
+    react-datetime "^2.6.0"
+    react-textarea-autosize "^4.0.5"
+
 "@kadira/storybook-addon-links@^1.0.0":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@kadira/storybook-addon-links/-/storybook-addon-links-1.0.1.tgz#566136a8020b60f82f146ef37d93b0c86de969d8"
+
+"@kadira/storybook-addon-notes":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@kadira/storybook-addon-notes/-/storybook-addon-notes-1.0.1.tgz#8aed1f999b43efa092ed36b7711add3f04ce774c"
+  dependencies:
+    babel-runtime "^6.5.0"
 
 "@kadira/storybook-addons@^1.5.0":
   version "1.6.1"
@@ -252,6 +270,10 @@ array-differ@^1.0.0:
 array-equal@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/array-equal/-/array-equal-1.0.0.tgz#8c2a5ef2472fd9ea742b04c77a75093ba2757c93"
+
+array-find@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/array-find/-/array-find-1.0.0.tgz#6c8e286d11ed768327f8e62ecee87353ca3e78b8"
 
 array-flatten@1.1.1:
   version "1.1.1"
@@ -1190,6 +1212,10 @@ boom@2.x.x:
   dependencies:
     hoek "2.x.x"
 
+bowser@^1.0.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/bowser/-/bowser-1.5.0.tgz#b97414bacbc631f19f1e2e11466566ec19324983"
+
 brace-expansion@^1.0.0:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.6.tgz#7197d7eaa9b87e648390ea61fc66c84427420df9"
@@ -1359,7 +1385,7 @@ clap@^1.0.9:
   dependencies:
     chalk "^1.1.3"
 
-classnames@^2.2.3:
+classnames@^2.2.0, classnames@^2.2.3:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
 
@@ -2272,6 +2298,10 @@ exec-sh@^0.2.0:
   dependencies:
     merge "^1.1.3"
 
+exenv@^1.2.0:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/exenv/-/exenv-1.2.1.tgz#75de1c8dee02e952b102aa17f8875973e0df14f9"
+
 exenv@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/exenv/-/exenv-1.2.0.tgz#3835f127abf075bfe082d0aed4484057c78e3c89"
@@ -2919,6 +2949,17 @@ ini@~1.3.0:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.4.tgz#0537cb79daf59b59a1a517dff706c86ec039162e"
 
+inline-style-prefix-all@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/inline-style-prefix-all/-/inline-style-prefix-all-2.0.2.tgz#44e23c00d3521a36041e07c9b1e81bf36770b08c"
+
+inline-style-prefixer@^1.0.3:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/inline-style-prefixer/-/inline-style-prefixer-1.0.4.tgz#849f657373a5cfbd8141cfddb013df6f68c6df39"
+  dependencies:
+    bowser "^1.0.0"
+    inline-style-prefix-all "^2.0.2"
+
 inquirer@^0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-0.12.0.tgz#1ef2bfd63504df0bc75785fff8c2c41df12f077e"
@@ -2936,6 +2977,10 @@ inquirer@^0.12.0:
     string-width "^1.0.1"
     strip-ansi "^3.0.0"
     through "^2.3.6"
+
+insert-css@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/insert-css/-/insert-css-1.1.0.tgz#4a3f7a3e783877381bb8471a6452d1d27315db9e"
 
 interpret@^0.6.4:
   version "0.6.6"
@@ -3780,7 +3825,7 @@ lodash.words@^3.0.0:
   dependencies:
     lodash._root "^3.0.0"
 
-lodash@^4.0.0, lodash@^4.15.0, lodash@^4.16.2, lodash@^4.16.4, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0, "lodash@>=3.5 <5", lodash@4.x.x:
+lodash@^4.0.0, lodash@^4.0.1, lodash@^4.15.0, lodash@^4.16.2, lodash@^4.16.4, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0, "lodash@>=3.5 <5", lodash@4.x.x:
   version "4.17.2"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.2.tgz#34a3055babe04ce42467b607d700072c7ff6bf42"
 
@@ -3841,6 +3886,10 @@ marked@^0.3.6:
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.6.tgz#b2c6c618fccece4ef86c4fc6cb8a7cbf5aeda8d7"
 
+material-colors@^1.0.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/material-colors/-/material-colors-1.2.0.tgz#956f0c87660882333cff7b7557efb7b03592820e"
+
 math-expression-evaluator@^1.2.14:
   version "1.2.14"
   resolved "https://registry.yarnpkg.com/math-expression-evaluator/-/math-expression-evaluator-1.2.14.tgz#39511771ed9602405fba9affff17eb4d2a3843ab"
@@ -3866,7 +3915,7 @@ merge-descriptors@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/merge-descriptors/-/merge-descriptors-1.0.1.tgz#b00aaa556dd8b44568150ec9d1b953f3f90cbb61"
 
-merge@^1.1.3:
+merge@^1.1.3, merge@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/merge/-/merge-1.2.0.tgz#7531e39d4949c281a66b8c5a6e0265e8b05894da"
 
@@ -3970,9 +4019,23 @@ mkdirp@0.5.0:
   dependencies:
     minimist "0.0.8"
 
-mobx@^2.3.4:
+mobx-react-devtools@^4.2.9:
+  version "4.2.9"
+  resolved "https://registry.yarnpkg.com/mobx-react-devtools/-/mobx-react-devtools-4.2.9.tgz#46034da90fbcfac3c9cc040fcc3ced72e739518a"
+
+mobx-react@^3.5.8:
+  version "3.5.9"
+  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-3.5.9.tgz#b710299539d58d7af1189b5e86bc0be4198a43c1"
+  dependencies:
+    hoist-non-react-statics "^1.2.0"
+
+mobx@^2.3.4, mobx@^2.6.0:
   version "2.6.3"
   resolved "https://registry.yarnpkg.com/mobx/-/mobx-2.6.3.tgz#f2d8fac660edde38a9df5e37b924065ff0f1104a"
+
+moment@^2.15.0:
+  version "2.16.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.16.0.tgz#f38f2c97c9889b0ee18fc6cc392e1e443ad2da8e"
 
 ms@0.7.1:
   version "0.7.1"
@@ -4179,6 +4242,10 @@ oauth-sign@~0.5.0:
 oauth-sign@~0.8.1:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.8.2.tgz#46a6ab7f0aead8deae9ec0565780b7d4efeb9d43"
+
+object-assign@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-3.0.0.tgz#9bedd5ca0897949bca47e7ff408062d549f587f2"
 
 object-assign@^4.0.1, object-assign@^4.1.0, object-assign@4.1.0:
   version "4.1.0"
@@ -4814,6 +4881,19 @@ querystringify@0.0.x:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-0.0.4.tgz#0cf7f84f9463ff0ae51c4c4b142d95be37724d9c"
 
+radium@^0.18.1:
+  version "0.18.1"
+  resolved "https://registry.yarnpkg.com/radium/-/radium-0.18.1.tgz#a01db9b4c6e6364de3b02d5976adf28d0b98351d"
+  dependencies:
+    array-find "^1.0.0"
+    exenv "^1.2.0"
+    inline-style-prefixer "^1.0.3"
+    rimraf "^2.4.0"
+
+ramda@^0.22.1:
+  version "0.22.1"
+  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.22.1.tgz#031da0c3df417c5b33c96234757eb37033f36a0e"
+
 randomatic@^1.1.3:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/randomatic/-/randomatic-1.1.5.tgz#5e9ef5f2d573c67bd2b8124ae90b5156e457840b"
@@ -4843,6 +4923,22 @@ react-base16-styling@^0.4.1:
     lodash.curry "^4.0.1"
     lodash.flow "^3.3.0"
     pure-color "^1.2.0"
+
+react-color@^2.4.3:
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/react-color/-/react-color-2.8.0.tgz#1be6d00c8ef78072ef2245eb03070e850d109b66"
+  dependencies:
+    lodash "^4.0.1"
+    material-colors "^1.0.0"
+    reactcss "^1.1.1"
+    tinycolor2 "^1.1.2"
+
+react-datetime@^2.6.0:
+  version "2.7.5"
+  resolved "https://registry.yarnpkg.com/react-datetime/-/react-datetime-2.7.5.tgz#f004fb2463684c6c918f7fa8431310a453441bea"
+  dependencies:
+    object-assign "^3.0.0"
+    react-onclickoutside "^4.1.0"
 
 react-dev-utils@^0.3.0:
   version "0.3.0"
@@ -4875,7 +4971,7 @@ react-dock@^0.2.1:
     lodash.debounce "^3.1.1"
     object-assign "^4.0.1"
 
-react-dom@^15.4.0:
+react-dom@^15.3.2, react-dom@^15.4.0:
   version "15.4.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.4.0.tgz#6a97a69000966570db48c746bc4b7b0ca50d1534"
   dependencies:
@@ -4935,6 +5031,12 @@ react-modal@^1.2.0, react-modal@^1.2.1:
     exenv "1.2.0"
     lodash.assign "^3.2.0"
 
+react-onclickoutside@^4.1.0:
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-4.9.0.tgz#2908c3136e244102bea5e5437a838a528d5d2995"
+  dependencies:
+    object-assign "^4.0.1"
+
 react-pure-render@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/react-pure-render/-/react-pure-render-1.0.2.tgz#9d8a928c7f2c37513c2d064e57b3e3c356e9fabb"
@@ -4961,12 +5063,25 @@ react-stubber@^1.0.0:
   dependencies:
     babel-runtime "^6.5.0"
 
-react@^15.4.0:
+react-textarea-autosize@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/react-textarea-autosize/-/react-textarea-autosize-4.0.5.tgz#55379f6a6fa575fc87d1b8de2756e57e3b6c995d"
+
+react@^15.3.2, react@^15.4.0:
   version "15.4.0"
   resolved "https://registry.yarnpkg.com/react/-/react-15.4.0.tgz#736c1c7c542e8088127106e1f450b010f86d172b"
   dependencies:
     fbjs "^0.8.4"
     loose-envify "^1.1.0"
+    object-assign "^4.1.0"
+
+reactcss@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/reactcss/-/reactcss-1.1.1.tgz#9f16fc737fae08daa23bf8a3429bd9f54e162b52"
+  dependencies:
+    classnames "^2.2.0"
+    lodash "^4.0.1"
+    merge "^1.2.0"
     object-assign "^4.1.0"
 
 read-pkg-up@^1.0.1:
@@ -5311,7 +5426,7 @@ right-align@^0.1.1:
   dependencies:
     align-text "^0.1.1"
 
-rimraf@^2.2.8, rimraf@^2.4.3, rimraf@^2.4.4, rimraf@~2.5.1, rimraf@~2.5.4, rimraf@2, rimraf@2.5.4:
+rimraf@^2.2.8, rimraf@^2.4.0, rimraf@^2.4.3, rimraf@^2.4.4, rimraf@~2.5.1, rimraf@~2.5.4, rimraf@2, rimraf@2.5.4:
   version "2.5.4"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.5.4.tgz#96800093cbf1a0c86bd95b4625467535c29dfa04"
   dependencies:
@@ -5582,6 +5697,19 @@ sshpk@^1.7.0:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.3.1.tgz#faf51b9eb74aaef3b3acf4ad5f61abf24cb7b93e"
 
+storybook-host:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/storybook-host/-/storybook-host-1.0.7.tgz#2c14d5df2f39582247f30a0215776048f5d7579d"
+  dependencies:
+    mobx "^2.6.0"
+    mobx-react "^3.5.8"
+    mobx-react-devtools "^4.2.9"
+    radium "^0.18.1"
+    ramda "^0.22.1"
+    react "^15.3.2"
+    react-dom "^15.3.2"
+    tinycolor2 "^1.4.1"
+
 stream-browserify@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/stream-browserify/-/stream-browserify-1.0.0.tgz#bf9b4abfb42b274d751479e44e0ff2656b6f1193"
@@ -5780,6 +5908,10 @@ timers-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/timers-browserify/-/timers-browserify-1.4.2.tgz#c9c58b575be8407375cb5e2462dacee74359f41d"
   dependencies:
     process "~0.11.0"
+
+tinycolor2@^1.1.2, tinycolor2@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/tinycolor2/-/tinycolor2-1.4.1.tgz#f4fad333447bc0b07d4dc8e9209d8f39a8ac77e8"
 
 tmpl@1.0.x:
   version "1.0.4"
