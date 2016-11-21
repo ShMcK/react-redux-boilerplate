@@ -4,7 +4,8 @@ import { host } from 'storybook-host'
 import { withKnobs, text } from '@kadira/storybook-addon-knobs'
 import withReadme from 'storybook-readme/with-readme'
 import readme from './App.md'
-// import { specs } from 'storybook-addon-specifications'
+import { specs } from 'storybook-addon-specifications'
+import { tests } from './App.test'
 
 import App from './index'
 
@@ -21,7 +22,7 @@ storiesOf('App', module)
 
     const story = <App greeting={greeting} />
 
-      // specs(() => require('./App.test').tests)
+      specs(() => tests)
 
     return story
   }))
