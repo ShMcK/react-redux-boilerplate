@@ -1,14 +1,16 @@
 {
-  "name": "react-d3",
+  "name": "react-redux-boilerplate",
   "version": "0.1.0",
+  "description": "Boilerplate for react-redux projects with Jest, React-Storybook, & Nightwatch",
+  "author": "Shawn McKay <shawn.j.mckay@gmail.com>",
   "scripts": {
     "build": "node scripts/build.js",
     "build-storybook": "build-storybook -s public",
+    "e2e": "nightwatch",
+    "e2e-setup": "node_modules/selenium-standalone/bin/selenium-standalone install && webdriver-manager update",
     "start": "HTTPS=true && node scripts/start.js",
     "storybook": "concurrently \"start-storybook -p 9009 -s public\" \"open http://localhost:9009\"",
-    "test": "node scripts/test.js --env=jsdom",
-    "e2e-setup": "node_modules/selenium-standalone/bin/selenium-standalone install && webdriver-manager update",
-    "e2e": "nightwatch"
+    "test": "node scripts/test.js --env=jsdom"
   },
   "babel": {
     "plugins": [
@@ -24,10 +26,10 @@
       "es6": true,
       "jest": true
     },
+    "extends": "react-app",
     "globals": {
       "resolveOwn": true
     },
-    "extends": "react-app",
     "parserOptions": {
       "ecmaFeatures": {
         "impliedStrict": true,
@@ -126,7 +128,10 @@
     "testEnvironment": "node",
     "cacheDirectory": "test/.cache",
     "collectCoverage": false,
-    "collectCoverageFrom": ["**/*.js", "!**/node_modules/**"],
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!**/node_modules/**"
+    ],
     "coverageDirectory": "test/.coverage",
     "coverageThreshold": {
       "global": {
@@ -139,5 +144,6 @@
     "globals": {},
     "notify": false,
     "resetMocks": false
-  }
+  },
+  "public": false
 }
