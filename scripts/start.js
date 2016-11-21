@@ -221,7 +221,15 @@ function runDevServer(host, port, protocol) {
     },
     // Enable HTTPS if the HTTPS environment variable is set to 'true'
     https: protocol === "https",
-    host: host
+    host: host,
+        // required for testing with React Storybook
+    externals: {
+      jsdom: 'window',
+      cheerio: 'window',
+      'react/addons': true,
+      'react/lib/ExecutionEnvironment': true,
+      'react/lib/ReactContext': 'window',
+    }
   })
 
   // Our custom middleware proxies requests to /index.html or a remote API.
