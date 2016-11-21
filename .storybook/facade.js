@@ -7,3 +7,12 @@ export const linkTo = linkToReal
 export const specs = specsReal
 export const describe = describeReal
 export const it = itReal
+
+export const beforeEach = beforeEachReal
+export const afterEach = afterEachReal
+export const before = beforeReal
+export const after = afterReal
+
+export const xit = xitReal
+export const fit = fitReal
+export const xdescribe = xdescribeReal

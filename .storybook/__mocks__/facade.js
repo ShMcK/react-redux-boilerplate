@@ -22,6 +22,7 @@ export const specs = (spec) => {
 }
 
 export const snapshot = (name, story) => {
+  
     it(name, function () {
       const renderer = require("react-test-renderer")
       const tree = renderer.create(story).toJSON()
@@ -31,3 +32,10 @@ export const snapshot = (name, story) => {
 
 export const describe = jasmine.currentEnv_.describe
 export const it = jasmine.currentEnv_.it
+export const beforeEach = jasmine.currentEnv_.beforeEach
+export const afterEach = jasmine.currentEnv_.afterEach
+export const xit = jasmine.currentEnv_.xit
+export const xdescribe = jasmine.currentEnv_.xdescribe
+export const fit = jasmine.currentEnv_.fit
+export const after = () => {}
+export const before = () => {}
