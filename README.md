@@ -5,10 +5,11 @@ Base React project template.
 ### Includes
 
 - [Create-react-app](https://github.com/facebookincubator/create-react-app) features
-- [React Storybook](https://github.com/storybooks/react-storybook)
 - [Flow](https://flowtype.org/)
+- [React Storybook](https://github.com/storybooks/react-storybook)
 - [Redux](https://github.com/reactjs/redux)
 - [Redux-devtools extension](https://github.com/zalmoxisus/redux-devtools-extension)
+- [Jest](http://facebook.github.io/jest/)
 - [Nightwatch E2E tests](http://nightwatchjs.org/)
 
 ### Setup
@@ -18,7 +19,7 @@ npm install
 npm start
 ```
 
-### Test
+### Unit & Snapshot Tests
 
 Using Jest.
 
@@ -30,11 +31,13 @@ npm run test
 
 Using React StoryBook.
 
+Includes: [readme](https://github.com/tuchk4/storybook-readme), [specs](https://github.com/mthuret/storybook-addon-specifications), [knobs](https://github.com/storybooks/storybook-addon-knobs). 
+
 ```shell
 npm run storybook
 ```
 
-### E2E
+### E2E Tests
 
 Using NightWatch & Chrome.
 

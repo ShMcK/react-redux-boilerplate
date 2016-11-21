@@ -1,7 +1,7 @@
 {
   "name": "react-redux-boilerplate",
   "version": "0.1.0",
-  "description": "Boilerplate for react-redux projects with Jest, React-Storybook, & Nightwatch",
+  "description": "Boilerplate for react-redux projects with React-Storybook, Flow & Nightwatch",
   "author": "Shawn McKay <shawn.j.mckay@gmail.com>",
   "scripts": {
     "build": "node scripts/build.js",
@@ -9,7 +9,7 @@
     "e2e": "nightwatch",
     "e2e-setup": "node_modules/selenium-standalone/bin/selenium-standalone install && webdriver-manager update",
     "start": "HTTPS=true && node scripts/start.js",
-    "storybook": "concurrently \"start-storybook -p 9009 -s public\" \"open http://localhost:9009\"",
+    "storybook": "start-storybook -p 9009",
     "test": "node scripts/test.js --env=jsdom"
   },
   "babel": {
@@ -55,7 +55,6 @@
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
     "@kadira/storybook-addon-knobs": "^1.6.0",
-    "@kadira/storybook-addon-notes": "^1.0.1",
     "autoprefixer": "6.5.1",
     "babel-core": "6.17.0",
     "babel-eslint": "7.0.0",
