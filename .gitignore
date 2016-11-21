@@ -6,6 +6,9 @@ flow-typed/npm
 
 # testing
 coverage
+e2e/reports
+e2e/screenshots
+e2e/log
 
 # production
 build

@@ -6,7 +6,9 @@
     "build-storybook": "build-storybook -s public",
     "start": "HTTPS=true && node scripts/start.js",
     "storybook": "concurrently \"start-storybook -p 9009 -s public\" \"open http://localhost:9009\"",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "e2e-setup": "node_modules/selenium-standalone/bin/selenium-standalone install && webdriver-manager update",
+    "e2e": "nightwatch"
   },
   "babel": {
     "plugins": [
@@ -46,7 +48,8 @@
     "react-dom": "^15.4.0",
     "react-redux": "^4.4.6",
     "redux": "^3.6.0",
-    "redux-thunk": "^2.1.0"
+    "redux-thunk": "^2.1.0",
+    "selenium-standalone": "^5.8.0"
   },
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
@@ -94,6 +97,7 @@
     "redux-devtools-extension": "^1.0.0",
     "redux-devtools-log-monitor": "^1.1.1",
     "rimraf": "2.5.4",
+    "selenium-standalone": "^5.8.0",
     "strip-ansi": "3.0.1",
     "style-loader": "0.13.1",
     "url-loader": "0.5.7",
