@@ -1,4 +1,4 @@
-# App
+# Greet
 
 A basic root component.
 

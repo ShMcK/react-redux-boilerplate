@@ -1,11 +1,11 @@
 import React from 'react'
-import App from './index'
+import Greet from './index'
 import { shallow } from 'enzyme'
 
-export const tests = describe('App', () => {
+export const tests = describe('Greet', () => {
 
   it('should have the text "Hello, World!', () => {
-    const output = shallow(<App greeting="Hello" />)
+    const output = shallow(<Greet greeting="Hello" />)
     expect(output.text()).toContain('Hello, World!')
   })
 

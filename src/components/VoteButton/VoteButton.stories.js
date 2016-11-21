@@ -1,15 +1,15 @@
 import React from 'react'
-import { storiesOf } from '@kadira/storybook'
+import { storiesOf, action } from '@kadira/storybook'
 import { host } from 'storybook-host'
 import { withKnobs, text } from '@kadira/storybook-addon-knobs'
 import withReadme from 'storybook-readme/with-readme'
-import readme from './App.md'
 import { specs } from 'storybook-addon-specifications'
-import { tests } from './App.test'
 
-import App from './index'
+import readme from './VoteButton.md'
+import { tests } from './VoteButton.test'
+import VoteButton from './index'
 
-storiesOf('App', module)
+storiesOf('VoteButton', module)
   .addDecorator(withKnobs)
   .addDecorator(host({
     title: 'An example component',
@@ -18,11 +18,14 @@ storiesOf('App', module)
     width: 400,
   }))
   .add('Default', withReadme([readme], () => {
-    const greeting = text('Greeting', 'Hello')
+    // knobs
+    const votes = text('Votes', 0)
+    // actions
+    const actions = {
+      voteUp: action('voteUp')
+    }
+    // tests
+    specs(() => tests)
 
-    const story = <App greeting={greeting} />
-
-      specs(() => tests)
-
-    return story
+    return <VoteButton votes={votes} voteUp={actions.voteUp} />
   }))

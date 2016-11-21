@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
-import './App.css'
+import './Greet.css'
 
-class App extends Component {
+class Greet extends Component {
   static propTypes = {
     greeting: PropTypes.string.isRequired,
   }
@@ -12,4 +12,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default Greet
