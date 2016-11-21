@@ -10,6 +10,7 @@
     "e2e-setup": "node_modules/selenium-standalone/bin/selenium-standalone install && webdriver-manager update",
     "start": "HTTPS=true && node scripts/start.js",
     "storybook": "start-storybook -p 9009",
+    "storybook-build": "build-storybook -o ./.out",
     "test": "node scripts/test.js --env=jsdom"
   },
   "babel": {
@@ -54,7 +55,9 @@
   },
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
+    "@kadira/storybook-addon-comments": "^1.9.1",
     "@kadira/storybook-addon-knobs": "^1.6.0",
+    "@kadira/storybook-database-cloud": "^2.3.2",
     "autoprefixer": "6.5.1",
     "babel-core": "6.17.0",
     "babel-eslint": "7.0.0",

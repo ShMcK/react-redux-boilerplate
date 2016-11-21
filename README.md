@@ -37,6 +37,12 @@ Includes: [readme](https://github.com/tuchk4/storybook-readme), [specs](https://
 npm run storybook
 ```
 
+To build your storybook as a site.
+
+```shell
+npm run storybook-build
+```
+
 ### E2E Tests
 
 Using NightWatch & Chrome.
