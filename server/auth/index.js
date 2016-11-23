@@ -3,7 +3,7 @@ const router = require('express').Router({
 })
 
 module.exports = function authRoutes() {
-  const auth = router.route('/auth')
+  // const auth = router.route('/auth')
   
   return router
 }
