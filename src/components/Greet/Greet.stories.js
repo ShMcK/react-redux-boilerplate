@@ -22,7 +22,7 @@ storiesOf('Greet', module)
 
     const story = <Greet greeting={greeting} />
 
-      specs(() => tests)
+    specs(() => tests)
 
     return story
   }))

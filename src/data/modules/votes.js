@@ -7,7 +7,7 @@ export const voteUp = () => ({
   type: VOTE_UP
 })
 
-const reducer = (state = 0, action) => {
+const reducer = (state = 0, action: Action) => {
   switch (action.type) {
 
     case VOTE_UP:
