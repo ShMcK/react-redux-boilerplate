@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { Greet, VoteButton } from '../../components'
+import { Login } from '../../components'
 import { voteUp } from '../../data/modules/votes'
 
 class App extends Component {
@@ -12,9 +12,7 @@ class App extends Component {
     const { votes, voteUp } = this.props
     return (
       <div>
-        <Greet greeting='Hello' />
-        <br />
-        <VoteButton votes={votes} voteUp={voteUp}/>
+        <Login />
       </div>
     )
   }
