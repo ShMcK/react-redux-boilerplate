@@ -25,6 +25,6 @@ exports.loginAttempts = function loginAttempts(cb) {
   return user.update(updates, cb)
 }
 
-exports.isLocked = function isLocked(user){
+exports.isLocked = function isLocked(user) {
   return !!(user.lockUntil && user.lockUntil > Date.now())
 }

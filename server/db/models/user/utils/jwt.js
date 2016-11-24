@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken')
-const { SECRET } = require('../../config')
+const { SECRET } = require('../../../../config')
 
 exports.signJwt = function signJwt(user) {
   return jwt.sign(user, SECRET, {

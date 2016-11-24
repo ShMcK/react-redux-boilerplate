@@ -1,12 +1,10 @@
 const User = require('../../db/models/user')
-const validateUser = require('../utils/validateUser')
-const { signJwt } = require('../utils/jwt')
 
 module.exports = function register(req, res) {
   const { username, email, password } = req.body
 
   // validate user 
-  const isValid = validateUser({ username, email, password })
+  const isValid = User.preValidate({ username, email, password })
   if (typeof isValid === 'string') {
     return res.status(403).json({ error: isValid })
   }
@@ -27,7 +25,7 @@ module.exports = function register(req, res) {
         if (err) return res.sendStatus(500).json({ error: 'There was a problem' })
 
         // authenticate with JWT
-        const token = signJwt(user)
+        const token = user.signJwt(user)
 
         // limit output
         res.status(200).json({

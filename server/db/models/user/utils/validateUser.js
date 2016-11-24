@@ -1,10 +1,9 @@
-const User = require('../../db/models/user')
-
+const User = require('../index')
 const validEmailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
 module.exports = function validateUser(user) {
   const { email, username, password } = user
-  
+
   // email
   if (!email) {
     return 'Email is required.'

@@ -17,7 +17,6 @@ module.exports = function connectDb() {
       }
     })
 
-
     console.log('connected to mongodb')
   })
 }

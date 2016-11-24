@@ -1,5 +1,4 @@
 const User = require('../../db/models/user')
-const { signJwt } = require('../utils/jwt')
 
 module.exports = function login(req, res) {
   const { email } = req.body
@@ -19,7 +18,7 @@ module.exports = function login(req, res) {
         if (!isMatch) res.status(403).json({ error: 'Wrong password' })
 
         // authenticate with JWT
-        const token = signJwt(user)
+        const token = user.signJwt()
 
         res.status(200).json({
           user: { email, username: user.username },

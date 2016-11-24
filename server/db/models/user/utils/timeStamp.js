@@ -10,5 +10,4 @@ module.exports = function timeStamp(user) {
     user.isNewUser = false
     return user
   }
-  
 }
