@@ -2,8 +2,8 @@ const bodyParser = require('body-parser')
 const router = require('express').Router({
   mergeParams: true
 })
-const login = require('./login')
-const register = require('./register')
+const login = require('./routes/login')
+const register = require('./routes/register')
 
 module.exports = function authRoutes() {
 

@@ -1,9 +1,7 @@
 const mongoose = require('mongoose')
 const loadFakeUsers = require('./init/loadUsers')
+const { DB_URL } = require('../config')
 const User = require('./models/user')
-
-// TODO: move to ENV var
-const MONGO_URL = 'mongodb://localhost:27017/express'
 
 module.exports = function connectDb() {
 

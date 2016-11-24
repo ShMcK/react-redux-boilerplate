@@ -1,4 +1,5 @@
-const User = require('../db/models/user')
+const User = require('../../db/models/user')
+const getJwt = require('../utils/jwt')
 
 module.exports = function login(req, res) {
   const { email } = req.body
@@ -15,9 +16,12 @@ module.exports = function login(req, res) {
       // log user in
     } else {
 
-      // TODO: handle JWT
+      const token = getJwt(user)
 
-      res.status(200).json(user)
+      res.status(200).json({
+        user,
+        token
+      })
     }
   })
 }

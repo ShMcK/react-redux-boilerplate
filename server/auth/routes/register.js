@@ -1,4 +1,4 @@
-const User = require('../db/models/user')
+const User = require('../../db/models/user')
 
 module.exports = function register(req, res) {
   const { username, email, password } = req.body
@@ -19,7 +19,9 @@ module.exports = function register(req, res) {
 
       User.create({ username, email, password }, (err, user) => {
         if (err) return res.sendStatus(500).json({ error: 'There was a problem' })
-        res.status(200).json('user added')
+        res.status(200).json({
+          user
+        })
       })
     }
   })

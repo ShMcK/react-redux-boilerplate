@@ -4,6 +4,7 @@ const app = express()
 const connectDb = require('./db')
 const apiRoutes = require('./api')
 const authRoutes = require('./auth')
+const morgan = require('morgan')
 const port = 8080
 
 // Connect to MongoDB
@@ -11,6 +12,8 @@ connectDb()
 
 // Load static assets from public directory
 app.use(express.static(join(__dirname, 'public')))
+
+app.use(morgan('dev'))
 
 // Routes
 app.use('/api', apiRoutes())
