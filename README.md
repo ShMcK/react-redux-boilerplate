@@ -11,12 +11,27 @@ Base React project template.
 - [Redux-devtools extension](https://github.com/zalmoxisus/redux-devtools-extension)
 - [Jest](http://facebook.github.io/jest/)
 - [Nightwatch E2E tests](http://nightwatchjs.org/)
+- Basic Express server with Authentication
 
 ### Setup
 
 ```shell
 npm install
 npm start
+```
+
+### Run Client
+
+```shell
+npm start
+```
+
+### Run Server
+
+Use the "server" branch. (`git checkout server`)
+
+```shell
+npm run server
 ```
 
 ### Unit & Snapshot Tests
