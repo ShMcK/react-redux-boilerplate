@@ -18,11 +18,22 @@ const userSchema = new mongoose.Schema({
     required: true
   },
   admin: Boolean,
+  createdAt: Date,
+  updatedAt: Date,
 })
 
-// hash passwords before saving them to the db
+
 userSchema.pre('save', function (next) {
   const user = this
+
+  // update time stamps
+  const now = new Date()
+  user.updatedAt = now
+  if (!user.createdAt) {
+    user.createdAt = now
+  }
+
+  // hash passwords before saving them to the db
   if (user.isModified('password') || user.isNew) {
     bcrypt.genSalt(10, (err, salt) => {
       if (err) return next(err)
