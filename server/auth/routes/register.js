@@ -1,5 +1,6 @@
 const User = require('../../db/models/user')
 const validateUser = require('../utils/validateUser')
+const { signJwt } = require('../utils/jwt')
 
 module.exports = function register(req, res) {
   const { username, email, password } = req.body
@@ -25,10 +26,13 @@ module.exports = function register(req, res) {
       User.create({ username, email, password }, (err, user) => {
         if (err) return res.sendStatus(500).json({ error: 'There was a problem' })
 
-        delete user['password']
+        // authenticate with JWT
+        const token = signJwt(user)
 
+        // limit output
         res.status(200).json({
-          user
+          user: { username, email },
+          token,
         })
       })
     }

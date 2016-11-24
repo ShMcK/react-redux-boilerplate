@@ -3,8 +3,6 @@ const { signJwt } = require('../utils/jwt')
 
 module.exports = function login(req, res) {
   const { email } = req.body
-  
-  // TODO: user password matches username or email
 
   User.findOne({ email }, (err, user) => {
 
@@ -15,16 +13,18 @@ module.exports = function login(req, res) {
       res.status(403).json({ error: 'User not found' })
       // log user in
     } else {
+      user.comparePassword(req.body.password, (err, isMatch) => {
+        console.log(isMatch)
+        if (err) res.status(403).json({ error: 'There was a problem' })
+        if (!isMatch) res.status(403).json({ error: 'Wrong password' })
 
-      // authenticate with JWT
-      const token = signJwt(user)
+        // authenticate with JWT
+        const token = signJwt(user)
 
-      // remove password from output
-      delete user['password']
-
-      res.status(200).json({
-        user,
-        token
+        res.status(200).json({
+          user: { email, username: user.username },
+          token
+        })
       })
     }
   })
