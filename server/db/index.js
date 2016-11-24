@@ -5,7 +5,7 @@ const User = require('./models/user')
 
 module.exports = function connectDb() {
 
-  mongoose.connect(MONGO_URL, (err) => {
+  mongoose.connect(DB_URL, (err) => {
     if (err) console.log('Error connecting', err)
 
     User.count({}, (err, count) => {

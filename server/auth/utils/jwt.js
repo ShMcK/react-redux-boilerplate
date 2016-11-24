@@ -1,8 +1,12 @@
 const jwt = require('jsonwebtoken')
 const { SECRET } = require('../../config')
 
-module.exports = function getJwt(user) {
+exports.signJwt = function signJwt(user) {
   return jwt.sign(user, SECRET, {
-    expiresInMinutes: 1440 // 24 hours
+    expiresIn: '1 day'
   })
+}
+
+exports.verifyJwt = function verifyJwt(token) {
+  // TODO: verify JWT
 }

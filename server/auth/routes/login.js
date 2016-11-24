@@ -1,10 +1,10 @@
 const User = require('../../db/models/user')
-const getJwt = require('../utils/jwt')
+const { signJwt } = require('../utils/jwt')
 
 module.exports = function login(req, res) {
   const { email } = req.body
   
-  // TODO: user password match
+  // TODO: user password matches username or email
 
   User.findOne({ email }, (err, user) => {
 
@@ -16,7 +16,11 @@ module.exports = function login(req, res) {
       // log user in
     } else {
 
-      const token = getJwt(user)
+      // authenticate with JWT
+      const token = signJwt(user)
+
+      // remove password from output
+      delete user['password']
 
       res.status(200).json({
         user,
