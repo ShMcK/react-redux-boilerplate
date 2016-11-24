@@ -1,10 +1,16 @@
-const User = require('../db/models/user')
-
+const bodyParser = require('body-parser')
 const router = require('express').Router({
   mergeParams: true
 })
 
+const User = require('../db/models/user')
+
 module.exports = function apiRoutes() {
+
+  // Body parser for handling requests
+  router.use(bodyParser.urlencoded({ extended: false }))
+  router.use(bodyParser.json())
+
   router.route('/users')
     .get((req, res) => {
 
