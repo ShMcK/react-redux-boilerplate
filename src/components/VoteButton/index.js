@@ -1,7 +1,8 @@
 import React, { PropTypes } from 'react'
+import { Button } from 'antd'
 
 const VoteButton = ({ votes, voteUp }) => (
-  <button onClick={voteUp}>{votes || 0}</button>
+  <Button onClick={voteUp}>{votes || 0}</Button>
 )
 
 VoteButton.propTypes = {

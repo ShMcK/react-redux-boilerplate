@@ -1,11 +1,30 @@
 import React from 'react'
-import NavBar from '../../components/NavBar'
+import { connect } from 'react-redux'
+
+import NavBar from '../../layout/NavBar'
+import Main from '../..//layout/Main'
+import Greet from '../../components/Greet'
+import VoteButton from '../../components/VoteButton'
+
+import { voteUp } from '../../data/modules/votes'
 
 const Home = (props) => (
   <div>
     <NavBar />
-    <h2>Home</h2>
+    <Main>
+      <Greet greeting='Hello' />
+      <br />
+      <VoteButton {...props} />
+    </Main>
   </div>
 )
 
-export default Home
+const mapStateToProps = state => ({
+  votes: state.votes,
+})
+
+const mapDispatchToProps = ({
+  voteUp
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home)

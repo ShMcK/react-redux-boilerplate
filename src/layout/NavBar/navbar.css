@@ -12,9 +12,8 @@
 
 .brand {
   font-size: 2rem;
-  padding: 4px;
 }
 
-.login {
+.login, .logout {
   font-size: 1.2rem;
 }

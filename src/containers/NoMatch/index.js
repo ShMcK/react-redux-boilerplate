@@ -1,10 +1,11 @@
 import React from 'react'
+import './noMatch.css'
 
 const NoMatch = ({ location }) => (
-  <div>
+  <section className='noMatch'>
     <h2>Sorry!</h2>
-    <p>{location.pathname} doesn't exist</p>
-  </div>
+    <p>path <strong>{location.pathname}</strong> doesn't exist</p>
+  </section>
 )
 
 export default NoMatch

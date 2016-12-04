@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react'
-import './Greet.css'
 
 const Greet = ({ greeting }) => (
   <div>{greeting}, World!</div>
