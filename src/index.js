@@ -1,4 +1,4 @@
-import renderView from './containers/render'
+import renderView from './render'
 import store from './data/store'
 
 /**
