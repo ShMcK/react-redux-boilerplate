@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 import './navbar.css'
 
 const NavBar = ({ isLoggedIn }) => (
@@ -10,8 +11,8 @@ const NavBar = ({ isLoggedIn }) => (
 
     <div className='navbar-right'>
       {isLoggedIn || isLoggedIn === undefined
-        ? <span className='login'>Login</span>
-        : <span className='logout'>Logout</span>
+        ? <Link to='/login' className='login'>Login</Link>
+        : <Link to='/' className='logout'>Logout</Link>
       }
     </div>
   </nav>
