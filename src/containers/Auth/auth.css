@@ -1,0 +1,15 @@
+.auth {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.authTitle {
+  margin-bottom: 2rem;
+}
+
+.loginForm, .registerForm {
+  flex: 1;
+  width: 100%;
+}
