@@ -7,7 +7,7 @@ const RegisterForm = ({ form }) => {
   const { getFieldDecorator } = form
   return (
     <section className='auth'>
-      <h3 className='authTitle'>Login</h3>
+      <h3 className='authTitle'>Register</h3>
       <Form horizontal className='registerForm'>
 
 

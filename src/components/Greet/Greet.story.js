@@ -4,6 +4,7 @@ import { host } from 'storybook-host'
 import { withKnobs, text } from '@kadira/storybook-addon-knobs'
 import withReadme from 'storybook-readme/with-readme'
 import { specs } from 'storybook-addon-specifications'
+import center from '../../../.storybook/decorators/center'
 
 import readme from './Greet.md'
 import { tests } from './Greet.test'
@@ -11,12 +12,7 @@ import Greet from './index'
 
 storiesOf('Greet', module)
   .addDecorator(withKnobs)
-  .addDecorator(host({
-    title: 'An example component',
-    align: 'center center',
-    height: '80%',
-    width: 400,
-  }))
+  .addDecorator(host(center))
   .add('Default', withReadme([readme], () => {
     const greeting = text('Greeting', 'Hello')
 

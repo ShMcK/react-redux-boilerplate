@@ -4,6 +4,7 @@ import { host } from 'storybook-host'
 import { withKnobs, text } from '@kadira/storybook-addon-knobs'
 import withReadme from 'storybook-readme/with-readme'
 import { specs } from 'storybook-addon-specifications'
+import center from '../../../.storybook/decorators/center'
 
 import readme from './VoteButton.md'
 import { tests } from './VoteButton.test'
@@ -11,12 +12,7 @@ import VoteButton from './index'
 
 storiesOf('VoteButton', module)
   .addDecorator(withKnobs)
-  .addDecorator(host({
-    title: 'An example component',
-    align: 'center center',
-    height: '80%',
-    width: 400,
-  }))
+  .addDecorator(host(center))
   .add('Default', withReadme([readme], () => {
     // knobs
     const votes = text('Votes', 0)
