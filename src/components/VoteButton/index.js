@@ -1,16 +1,12 @@
-import React, { Component, PropTypes } from 'react'
+import React, { PropTypes } from 'react'
 
-class VoteButton extends Component {
-  static propTypes = {
-    votes: PropTypes.number.isRequired,
-    voteUp: PropTypes.func.isRequired,
-  }
-  render() {
-    const { votes, voteUp } = this.props
-    return (
-      <button onClick={voteUp}>{votes || 0}</button>
-    )
-  }
+const VoteButton = ({ votes, voteUp }) => (
+  <button onClick={voteUp}>{votes || 0}</button>
+)
+
+VoteButton.propTypes = {
+  votes: PropTypes.number.isRequired,
+  voteUp: PropTypes.func.isRequired,
 }
 
 export default VoteButton

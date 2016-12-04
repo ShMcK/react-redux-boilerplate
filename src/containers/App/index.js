@@ -1,24 +1,11 @@
-import React, { Component, PropTypes } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
-import { Greet, VoteButton } from '../../components'
+import Home from '../../components/Home'
 import { voteUp } from '../../data/modules/votes'
 
-class App extends Component {
-  static contextTypes = {
-    store: PropTypes.object.isRequired,
-  }
-
-  render() {
-    const { votes, voteUp } = this.props
-    return (
-      <div>
-        <Greet greeting='Hello' />
-        <br />
-        <VoteButton votes={votes} voteUp={voteUp}/>
-      </div>
-    )
-  }
-}
+const App = (props) => (
+  <Home {...props} />
+)
 
 const mapStateToProps = state => ({
   votes: state.votes,

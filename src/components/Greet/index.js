@@ -1,15 +1,12 @@
-import React, { Component, PropTypes } from 'react'
+import React, { PropTypes } from 'react'
 import './Greet.css'
 
-class Greet extends Component {
-  static propTypes = {
-    greeting: PropTypes.string.isRequired,
-  }
-  render() {
-    return (
-      <div>{this.props.greeting}, World!</div>
-    )
-  }
+const Greet = ({ greeting }) => (
+  <div>{greeting}, World!</div>
+)
+
+Greet.propTypes = {
+  greeting: PropTypes.string.isRequired,
 }
 
 export default Greet
