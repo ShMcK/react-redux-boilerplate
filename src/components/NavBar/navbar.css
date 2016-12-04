@@ -1,0 +1,20 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 4rem;
+  padding: 0 1rem;
+}
+
+.navbar-left {}
+
+.navbar-right {}
+
+.brand {
+  font-size: 2rem;
+  padding: 4px;
+}
+
+.login {
+  font-size: 1.2rem;
+}
