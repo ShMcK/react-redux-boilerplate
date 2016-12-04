@@ -9,6 +9,8 @@ Base React project template.
 - [React Storybook](https://github.com/storybooks/react-storybook)
 - [Redux](https://github.com/reactjs/redux)
 - [Redux-devtools extension](https://github.com/zalmoxisus/redux-devtools-extension)
+- [React-Router v4](https://react-router.now.sh/quick-start)
+- [AntD UI](https://ant.design/)
 - [Jest](http://facebook.github.io/jest/)
 - [Nightwatch E2E tests](http://nightwatchjs.org/)
 
